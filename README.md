@@ -2,7 +2,6 @@
 
 This addon can be used to switch themes of stories in [Storybook](https://storybook.js.org/).
 
-===
 
 ## Getting Started
 

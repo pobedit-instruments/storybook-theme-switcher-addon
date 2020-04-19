@@ -10,7 +10,6 @@ export const ThemeSwitcher: React.FunctionComponent<Props> = () => {
 
     return (
         <IconButton
-            key="dark-mode"
             active={isDarkMode}
             title={isDarkMode ? 'Change theme to light mode' : 'Change theme to dark mode'}
             onClick={handleTheme}

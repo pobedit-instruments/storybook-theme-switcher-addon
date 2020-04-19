@@ -34,13 +34,18 @@ within your component:
 
 ```typescript
 import React, {PureComponent} from 'react';
-import { ThemeContext } from '@pobedit/storybook-theme-switcher-addon';
+import { ThemeContext, ThemeColor } from '@pobedit/storybook-theme-switcher-addon'; import {background} from '@storybook/theming';
 
-class Example extends PureComponent<null> {
+export enum Color {
+    dark = '#2B3648',
+    light = '#fafafa'
+}
+
+class StoryWrapper extends PureComponent<null> {
     static contextType: React.Context<string> = ThemeContext;
 
     render() {
-        return <div {...this.props} />;
+        return <div style={{backgroundColor: ThemeColor[this.context]}}> { YOUR_STORY } </div>;
     }
 }
 ```

@@ -1,0 +1,12 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Use LF
+*.ts eol=lf
+*.js eol=lf
+*.json eol=lf
+
+# Treat spaces
+*.ts   filter=tabspace
+*.js   filter=tabspace
+*.json filter=tabspace

@@ -1,0 +1,102 @@
+# --------------------------
+# System
+# --------------------------
+
+*~
+*#*
+._*
+\#*
+*.bak
+*.tmp
+*.swp
+*.pid
+
+# --------------------------
+# OSX
+# --------------------------
+
+.DS_Store
+
+# --------------------------
+# Git
+# --------------------------
+
+.gitconfig
+
+# --------------------------
+# Xcode
+# --------------------------
+
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+#project.xcworkspace
+
+# --------------------------
+# Android/IJ
+# --------------------------
+
+.gradle
+local.properties
+
+# --------------------------
+# Editors
+# --------------------------
+
+*.iml
+.idea
+!android/.idea
+android/.idea/libraries/
+android/.idea/workspace.xml
+*.sublime-workspace
+.vscode
+.idea_modules/
+.eslintcache
+.grunt
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# --------------------------
+# BUCK
+# --------------------------
+
+buck-out/
+\.buckd/
+android/app/libs
+android/keystores/debug.keystore
+
+# --------------------------
+# Node.js
+# --------------------------
+
+.npm
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# --------------------------
+# Project
+# --------------------------
+
+**/*js.map
+/index.d.ts
+!static/**/*.js
+
+dist/
+lib/
+storybook/
+.storybook/public

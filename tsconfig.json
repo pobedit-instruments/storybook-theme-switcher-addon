@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "strict": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "ESNext",
+    "lib": ["dom", "es7"],
+    "types": ["node", "jest"],
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "declaration": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}

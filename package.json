@@ -1,6 +1,6 @@
 {
   "name": "@pobedit/storybook-theme-switcher-addon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "description": "Theme Switcher addon can be used to switch themes of stories in Storybook",
   "keywords": [

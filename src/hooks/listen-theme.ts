@@ -1,4 +1,5 @@
 import {useEffect} from 'react';
+import {PARAM_KEY} from '../config';
 
 const useWindowEvent = (event: string, callback: () => void) => {
     useEffect(() => {
@@ -9,7 +10,7 @@ const useWindowEvent = (event: string, callback: () => void) => {
 };
 
 const listenTheme = (callback: () => void) => {
-    return useWindowEvent('theme', callback);
+    return useWindowEvent(PARAM_KEY, callback);
 };
 
 export {listenTheme};

@@ -2,11 +2,13 @@ import React from 'react';
 import {IconButton} from '@storybook/components';
 import {useTheme} from '../../hooks';
 import {Sun, Moon} from './icons';
+import {getTheme} from '../../utils/storage';
 
 type Props = {};
 
 export const ThemeSwitcher: React.FunctionComponent<Props> = () => {
-    const [isDarkMode, handleTheme] = useTheme();
+    const theme = getTheme();
+    const [isDarkMode, handleTheme] = useTheme(theme);
 
     return (
         <IconButton

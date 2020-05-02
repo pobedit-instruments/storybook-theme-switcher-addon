@@ -1,18 +1,18 @@
 import {useState} from 'react';
 import {Theme} from '../config';
-import {switchTheme, getTheme} from '../utils/storage';
+import {switchTheme} from '../utils/storage';
+import {PARAM_KEY} from '../config';
 import 'custom-event-polyfill';
 
-const useTheme = (): [boolean, () => void] => {
-    const savedTheme = getTheme();
-    const [currentTheme, setTheme] = useState<string>(savedTheme);
+const useTheme = (theme: string): [boolean, () => void] => {
+    const [currentTheme, setTheme] = useState<string>(theme);
 
     const handleTheme = () => {
         const theme = switchTheme();
 
         setTheme(theme);
 
-        const themeEvent = new CustomEvent('theme', {
+        const themeEvent = new CustomEvent(PARAM_KEY, {
             detail: theme
         });
 

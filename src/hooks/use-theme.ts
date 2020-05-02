@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {Theme} from '../config';
 import {switchTheme, getTheme} from '../utils/storage';
+import 'custom-event-polyfill';
 
 const useTheme = (): [boolean, () => void] => {
     const savedTheme = getTheme();

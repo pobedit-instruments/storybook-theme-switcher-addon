@@ -1,28 +1,39 @@
 # @pobedit/storybook-theme-switcher-addon
 
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.txt)
+
 This addon can be used to switch themes of stories in [Storybook](https://storybook.js.org/).
-
-
-## Getting Started
-
-Install this addon by adding the @storybook/addon-links dependency:
 
 ![Light theme](./src/static/example-light.png)
 
 ![Dark Theme](./src/static/example-dark.png)
 
 
-```sh
-yarn add -D @pobedit/storybook-theme-switcher-addon
+## Installation
+
+Install with npm or Yarn:
+
+**npm**:
+
+```
+npm install @pobedit/storybook-theme-switcher-addon --save
 ```
 
-within `.storybook/addons.ts`:
+**Yarn**:
+
+```
+yarn add @pobedit/storybook-theme-switcher-addon
+```
+
+## Basic usage
+
+**.storybook/addons.ts**:
 
 ```js
 import '@pobedit/storybook-theme-switcher-addon/register';
 ```
 
-within `.storybook/config.tsx`:
+**.storybook/config.tsx**:
 
 ```js
 import {configure, addDecorator} from '@storybook/react';
@@ -30,11 +41,12 @@ import {configure, addDecorator} from '@storybook/react';
 addDecorator(withTheme);
 ```
 
-within your component:
+**Component**:
 
 ```typescript
 import React, {PureComponent} from 'react';
-import { ThemeContext, ThemeColor } from '@pobedit/storybook-theme-switcher-addon'; import {background} from '@storybook/theming';
+import { ThemeContext, ThemeColor } from '@pobedit/storybook-theme-switcher-addon'; 
+import {background} from '@storybook/theming';
 
 export enum Color {
     dark = '#2B3648',
@@ -49,3 +61,24 @@ class StoryWrapper extends PureComponent<null> {
     }
 }
 ```
+
+## Contributing
+
+Feel free to submit a pull request if you find any bugs.
+Please make sure all commits are properly documented.
+
+## Tests
+
+```
+npm test
+```
+
+## Publishing
+
+```
+npm publish --access public --verbose
+```
+
+## License
+
+MIT
